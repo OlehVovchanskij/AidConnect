@@ -1,0 +1,13 @@
+import { IsOptional, IsString } from 'class-validator';
+
+export class UpdateUserDto {
+  @IsOptional()
+  @IsString()
+  name?: string;
+
+  @IsOptional()
+  location?: {
+    latitude: number;
+    longitude: number;
+  };
+}
